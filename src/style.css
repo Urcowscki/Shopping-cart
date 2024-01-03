@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Nunito&family=Nunito+Sans:opsz,wght@6..12,300;6..12,500&family=Roboto:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin-bottom: 5px;
 }
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  margin-bottom: 60px;
 }
 
 i {
@@ -19,13 +20,29 @@ a {
   color: whitesmoke;
 }
 
+footer {
+  background-color: #212529;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.cart,
+footer {
+  position: fixed;
+}
+
 .navbar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: #212529;
   color: whitesmoke;
-  padding: 26px 60px;
+  padding: 16px 60px;
+  margin-bottom: 30px;
 }
 
 .cart {
@@ -48,13 +65,14 @@ a {
   border-radius: 3px;
 }
 
-/*SHOP ITEMS STYLE*/
+/* SHOP ITEMS STYLE */
 
 .shop {
   display: grid;
   grid-template-columns: repeat(4, 223px);
   gap: 30px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1000px) {
@@ -103,15 +121,73 @@ a {
   color: green;
 }
 
-/**
-* ! style rules for label and some buttons
-**/
+/* Style rules for label and some buttons */
 
 .text-center {
   text-align: center;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
-.HomeBtn {
-  background-color: #fff;
+.HomeBtn,
+.checkout,
+.removeAll {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.checkout {
+  background-color: rgb(38, 170, 38);
+}
+
+.removeAll {
+  background-color: rgb(236, 27, 27);
+}
+
+.bi-x-lg {
+  color: red;
+  font-weight: bold;
+}
+
+/* Style rules for shopping cart */
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Style rules for cart-items */
+
+.cart-item {
+  border: 1px solid #212529;
+  border-radius: 4px;
+  display: flex;
+}
+
+.title-price-x {
+  width: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: white;
+  border-radius: 3px;
+  padding: 4px 3px;
 }

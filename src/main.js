@@ -3,7 +3,7 @@ let shop = document.getElementById('shop');
 let generateShop = () => {
   return (shop.innerHTML = shopItemsData
     .map((x) => {
-      let { id, name, value, desc, img } = x;
+      let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div id=product-id-${id} class="item">
@@ -12,7 +12,7 @@ let generateShop = () => {
       <h3>${name}</h3>
       <p>${desc}</p>
       <div class="price-quantity">
-      <h2>$ ${value}</h2>
+      <h2>$ ${price}</h2>
       <div class="bttns">
       <i onclick="decrement(${id})" class="bi bi-dash"></i>
       <div id=${id} class="quantity">
